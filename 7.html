@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mad-libs</title>
+  <style>
+    body{
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var a = prompt("Please enter your name");
+
+    var word1 = prompt("Please enter first word");
+    var word2 = prompt("Please enter second word");
+    var word3 = prompt("Please enter third word");
+    var word4 = prompt("Please enter fourth word");
+    var word5 = prompt("Please enter fifth word");
+    var color1 = prompt("Please choose a colour or write its hex value");
+
+    document.write("hello ");
+    document.write("<div style= \"color:"+ color1+"; display: inline;\">" +  a + ". </div>");
+
+    document.write("Where are you going? ");
+    document.write(" I am going to the grocery to buy a ");
+    document.write("<div style= \"color:"+ color1+"; display: inline;\">" + word1 + ".</div>");
+
+    document.write(" I saw you after 10 days. Did you go for ");
+    document.write("<div style= \"color:"+ color1+"; display: inline;\">" + word2 + "?</div>");
+
+    document.write(" Yes i did go for it and won a ");
+    document.write("<div style= \"color:"+ color1+"; display: inline;\">" + word3 + ".</div>");
+
+    document.write(" Oh, thats absolutely great. All the ");
+    document.write("<div style= \"color:"+ color1+"; display: inline;\">" + word4 + "</div>");
+
+    document.write(" to you.");
+    document.write(" Ok, see you ");
+    document.write("<div style= \"color:"+ color1+"; display: inline;\">" + word5 + ".</div>");
+
+  </script>
+</body>
+</html>

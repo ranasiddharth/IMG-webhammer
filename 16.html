@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* .b{
+      background-color: orange;
+      z-index: 3;
+    } */
+    .a{
+      /* border: 1px solid black; */
+      width: 70px;
+      height: 70px;
+      /* /* border-radius: 50%; */
+      position: absolute;
+      /* background-color: black; */ 
+    }
+    .a1{
+      top: 30px;
+      left: 400px;
+    }
+    .a2{
+      top: 100px;
+      left: 300px;
+    }
+    .a3{
+      left: 300px;
+      top: 200px;
+    }
+    .a4{
+      left: 400px;
+      top: 270px;
+    }
+    .a6{
+      left: 500px;
+      top: 100px;
+    }
+    .a5{
+      left: 500px;
+      top: 200px;
+    }
+    /* img{
+      margin-left: 80px;
+      margin-top: 20px;
+    } */
+  </style>
+</head>
+<body>
+  
+  
+  <img id="a1" class="a1 a" src="http://www.webhammer.com/javascript/materials/marble1.jpg" alt="" onmouseout="func()" onmouseover="stop()">
+  <img id="a2" class="a2 a" src="http://www.webhammer.com/javascript/materials/marble1.jpg" alt="" onmouseout="func()" onmouseover="stop()">
+  <img id= "a3" class="a3 a" src="http://www.webhammer.com/javascript/materials/marble1.jpg" alt="" onmouseout="func()" onmouseover="stop()">
+  <img id="a4" class="a4 a" src="http://www.webhammer.com/javascript/materials/marble1.jpg" alt="" onmouseout="func()" onmouseover="stop()">
+  <img id="a5" class= "a5 a" src="http://www.webhammer.com/javascript/materials/marble1.jpg" alt="" onmouseout="func()" onmouseover="stop()">
+  <img id="a6" class="a6 a" src="http://www.webhammer.com/javascript/materials/marble1.jpg" alt="" onmouseout="func()" onmouseover="stop()">
+
+  <button onclick="func()">Start</button>
+  <button onclick="stop()">Stop</button>
+  <script>
+    // var counter;
+    var k=0;
+    var counter;
+    function func(){
+      counter = setInterval(start, 1000);
+    }
+    function start(){
+      k=k+1;
+      if(k==7){
+        k=1;
+      }
+      var x = document.getElementById("a"+k);
+      x.src = "marble.png";
+      if(k-1>0){
+        var y = document.getElementById("a"+(k-1));
+        y.src = "http://www.webhammer.com/javascript/materials/marble1.jpg";
+      }
+      if(k==1){
+        var y = document.getElementById("a6");
+        y.src = "http://www.webhammer.com/javascript/materials/marble1.jpg"
+      }
+    }
+    function stop(){
+      clearInterval(counter);
+    }
+  </script>
+</body>
+</html>

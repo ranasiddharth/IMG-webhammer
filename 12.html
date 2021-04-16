@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input id="btn" type="button" value="Change color">
+  </form>
+    
+  <script>
+
+    function func(){
+      document.body.style.backgroundColor = "blue";
+    }
+    var a = document.getElementById("btn");
+    a.addEventListener("click", func);
+
+  </script>
+</body>
+</html>

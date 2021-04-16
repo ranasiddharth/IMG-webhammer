@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    img{
+      display: block;
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <img onclick="myfunc()" src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="">
+  <br><br>
+  <form action="">
+    <input onclick="func()" type="button" value="Close">
+  </form>
+  <script>
+    var newWindow;
+    function func(){
+      newWindow.close();
+    }
+    function myfunc(){
+      newWindow = window.open("https://www.google.com","_blank", "height=300,width=300, top= 400, left=200");
+    }
+  </script>
+</body>
+</html>
