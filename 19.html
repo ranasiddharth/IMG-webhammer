@@ -44,10 +44,13 @@ function checkCookie() {
   if (count != "") {
 
     let date2 = new Date();
-    alert("You have visited this site "+ Number.parseInt(count , 10)+1 + " times and last visit was at "+ time_visit);
+    var t = parseInt(count)+1;
+    // console.log(t);
+    // console.log(count);
+    alert("You have visited this site "+ t + " times and last visit was at "+ time_visit);
     
     setCookie("time" , date2 , 365);
-    setCookie("counter" , Number.parseInt(count , 10)+1 , 365);
+    setCookie("counter" , t , 365);
 
   } else {
     
@@ -56,7 +59,7 @@ function checkCookie() {
     var visits = 1;
     alert("This is your first visit to this site . Have a cool experience and do revisit");
     setCookie("time" , date1 , 365);
-    setCookie("counter" , visits , 365);
+    setCookie("counter" , 1 , 365);
     
 
   }
